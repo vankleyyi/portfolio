@@ -1,0 +1,404 @@
+:root{
+  --bg: #ffffff;
+  --fg: #000000;
+  --muted: #424242;
+  --line: #ffffff;
+  --chip: #f2f2f2;
+  --chipText: #000;
+  --star: #f5c542;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* semantic italics */
+em{
+  font-style: italic;
+}
+
+/* ───────── INTRO / HEADER ───────── */
+
+.site-header{
+  padding: 54px 0 38px;
+}
+
+.site-header-inner{
+  width: min(850px, 85vw);
+  margin: 0 auto;
+}
+
+.intro-main{
+  padding-bottom: 26px;
+  border-bottom: 1px solid #dedede;
+}
+
+.hero-name{
+  margin: 0 0 7px;
+  font-size: clamp(27px, 3.4vw, 38px);
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.hero-kicker{
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.hero-intro{
+  margin: 0;
+  max-width: 76ch;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.profile-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.profile-links a,
+.projects-top-link{
+  color: var(--fg);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #bdbdbd;
+  transition: text-decoration-color .2s ease;
+}
+
+.profile-links a:hover,
+.projects-top-link:hover{
+  text-decoration-color: var(--fg);
+}
+
+.about{
+  max-width: 720px;
+  padding-top: 22px;
+}
+
+.about .section-title{
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.about p{
+  margin: 0;
+  max-width: 85ch;
+  color: var(--muted);
+  font-family: Calibri, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ───────── LAYOUT ───────── */
+
+.wrap{
+  width: min(850px, 85vw);
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+.section-head{
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-bottom: 26px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-title{
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.section-subtitle{
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ───────── PROJECT GRID ───────── */
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px 100px;
+}
+
+@media (max-width: 900px){
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+}
+
+.project{
+  opacity: 0;
+  transform: translateY(42px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.project.reveal{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-click{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-media{
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 18px;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+/* make sure video respects the same styling */
+video.project-media{
+  background: #000;
+}
+
+/* text */
+.project-title{
+  margin: 0 0 5px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* awards */
+.project-highlights{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+
+.project-highlight{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.project-highlight i{
+  color: var(--star);
+  position: relative;
+  top: 0.08em;
+}
+
+.project-highlight p{
+  margin: 0;
+}
+
+/* description */
+.project-desc{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 70ch;
+  white-space: pre-line;
+  font-family:
+    Calibri,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+/* tags */
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.chip{
+  background: var(--chip);
+  color: var(--chipText);
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* ───────── MODAL ───────── */
+
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 100;
+}
+
+.modal.open{
+  display: grid;
+  place-items: center;
+}
+
+.modal-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.82);
+}
+
+.modal-card{
+  position: relative;
+  width: min(800px, 92vw);
+  max-height: 91vh;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* close */
+.modal-close{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* scrollable body */
+.modal-body{
+  padding: 22px 22px 28px;
+  overflow-y: auto;
+}
+
+/* modal text */
+.modal-title{
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.modal-desc{
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--muted);
+  white-space: pre-line;
+  font-family:
+    Calibri,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+/* images below text */
+.modal-gallery{
+  margin: 18px 0 24px;
+  display: flex;
+  flex-wrap: wrap;          /* ✅ allows rows */
+  justify-content: center;  /* ✅ center the row */
+  gap: 12px;
+}
+
+/* small horizontal thumbnails */
+.modal-gallery img{
+  width: 240px;             /* ✅ not full width */
+  height: 135px;            /* ✅ force horizontal crop */
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--line);
+  background: #f8f8f8;
+}
+
+
+
+/* extra sections */
+.modal-sections h4{
+  margin: 22px 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modal-sections p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
+  font-family:
+    Calibri,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.project-desc,
+.modal-desc,
+.modal-sections p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+@media (max-width: 600px){
+  .site-header{
+    padding: 34px 0 28px;
+  }
+
+  .site-header-inner,
+  .wrap{
+    width: min(850px, 88vw);
+  }
+
+  .hero-name{
+    font-size: 30px;
+  }
+
+  .hero-kicker{
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .profile-links{
+    gap: 14px;
+  }
+
+  .about p{
+    font-size: 14px;
+  }
+
+  .section-head{
+    margin-bottom: 22px;
+  }
+}
