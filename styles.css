@@ -63,9 +63,24 @@ em{
 
 .hero-intro{
   margin: 0;
-  max-width: 76ch;
+  width: 100%;
+  max-width: none;
   font-size: 14px;
   line-height: 1.8;
+}
+
+.hero-intro {
+  font-family: Calibri, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-intro p{
+  margin: 0 0 12px;
+}
+
+.hero-intro p:last-child{
+  margin-bottom: 0;
 }
 
 .profile-links{
@@ -251,6 +266,7 @@ video.project-media{
   padding: 4px 8px;
 }
 
+
 /* ───────── MODAL ───────── */
 
 .modal{
@@ -370,6 +386,20 @@ video.project-media{
   text-justify: inter-word;
 }
 
+.project-resource {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.project-resource a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.project-resource a:hover {
+  opacity: 0.6;
+}
 
 @media (max-width: 600px){
   .site-header{

@@ -17,7 +17,13 @@ const projects = [
       "media/ExperiencePicture.jpg",
       "media/embraceCollab.jpg",
       "media/Awards_2831-BD.jpg"
-    ]
+    ],
+    resources: [
+  {
+    label: "Read the press feature ↗",
+    url: "https://blog.laval-virtual.com/en/embrace-a-vr-experience-to-raise-awareness-of-anorexia-nervosa/"
+  }
+]
   },
   {
     title: "EmBelt",
@@ -33,14 +39,59 @@ const projects = [
       "media/IMG_2866.JPG", "media/IMG_2048.jpg"
     ]
   },
+        {
+    title: "Multi-View Drone Evaluation",
+    tags: ["HCI Research", "User Study", "Data Analysis"],
+    highlights: [
+      "2024 IEEM Department Project Exhibition #Outstanding Work"
+    ],
+    desc: "We carried out a research project to evaluate how well people recognize objects when using different drone control perspectives and interfaces. Our user experiments tested four UI variations that combined FPV and TPV on a PC interface.",
+    cover: "media/newdroneDemo.webp",
+    modaldesc: "This project explores how different drone control perspectives and interface designs impact object recognition. We created four user interface setups that use both first-person (FPV) and third-person (TPV) views with a PC-based control system. \nMy role included helping design the interface, setting up the experiment, building the testing system, and analyzing the results with ANOVA to see how viewpoint and interface setup affect recognition accuracy. ",
+    gallery: [
+
+    ],
+    resources: [
+      {
+        label: "View research results (Chinese Mandarin) ↗",
+        url: "https://drive.google.com/file/d/1VWq29b9UjwY4M5V6EmSWZ6kdU_UAKNRY/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    title: "Pen Picker",
+    tags: ["Robotic Arm", "OpenCV", "Robot Manipulation"],
+    highlights: [
+    ],
+    desc: "Pen Picker is a solo project where I used the RealSense SDK and OpenCV to detect and locate pens, then guided a Trossen Robotics PincherX 100 to reach and pick them up.",
+    cover: "media/penVideo.webp",
+    modaldesc:"Sizzler! is a hackathon project where our team explored a wearable, head-mounted interface for sensing and interaction. We worked together in a short, focused sprint to build a working prototype that combined mechanical structure, electronics, and system design. \nAlthough I was listed under Special Thanks because of health issues during the event, I helped with the mechanical design, especially the structural layout and making sure the wearable form was practical.",
+    gallery: [
+
+    ]
+  },
     {
     title: "AR Hand Gesture Controlled Drone",
-    tags: ["AR Interfaces", "Gesture Interaction", "Drone Control"],
+    tags: ["AR", "Gesture Interaction", "Drone Control"],
     desc: "The project focuses on using hand gesture control to operate a drone through augmented reality (AR) to enhance productivity in manufacturing. The work involves synchronizing the drone with gesture recognition, fine-tuning the recognition thresholds, and managing video transmission, among other technical tasks.",
     cover: "media/ARDrone.webp",
     modaldesc:"This project explores using hand gestures and AR to control drones and improve productivity in manufacturing. The system links real-time gesture recognition with drone control, so operators can give commands easily without using standard controllers. \nMy role was to connect gesture input to drone actions, adjust recognition settings for better reliability, and handle live video feeds to help with situational awareness.",
 
   },
+  {
+    title: "塭底家 Home, Fish Farm",
+    tags: ["Community Tech", "Interaction Design", "Unity"],
+    highlights: [
+      "Homecoming Entrepreneurship Contest finalist"
+    ],
+    desc: "Home, Fish Farm is a VR game designed to enhance the experience of visitors on the Fish Forest fish farm tour. Participants listen to a guide's narration while exploring the terrain, diverse fish species, and ecosystems within the fish farm.",
+    cover: "media/fishfarmDemo.webp",
+    modaldesc:"Home Fish Farm is an interactive VR experience that helps people learn about the environment and daily routines of a local fish farm through hands-on tasks. The project turns activities like feeding fish, checking pond conditions, and moving around the farm into short VR sessions that focus on learning by doing. \nI handled the system design, interaction design, and development in Unity, deciding how to present environmental details and local practices to users. ",
+    gallery: [
+      "media/IMG_6023.JPG", "media/IMG_7740.PNG", "media/IMG_6037_1_0.HEIC", "media/IMG_5999_5_0.HEIC"
+    ]
+  },
+   
     {
     title: "Sizzler!",
     tags: ["BCI", "Wearable Systems", "Rapid Prototyping"],
@@ -54,30 +105,9 @@ const projects = [
       "media/E28BA824-8541-45D8-AE54-EFA0D6BA8853.jpg", "media/IMG_8198 (1).jpg"
     ]
   },
-    {
-    title: "EmBelt 2.0",
-    tags: ["Sensing & Control", "Expert Evaluation", "User Research"],
-    highlights: [
-    ],
-    desc: "EmBelt is a extended project from Embrace. Combining VR and an electronic belt-like haptic device, it aims to raise people's awareness on body image concerns and related eating disorders.",
-    cover: "media/representativeImg.webp",
-    modaldesc:"EmBelt 2.0 was created in response to feedback from users and experts, with a focus on making the device more reliable and improving the experience. \nI redesigned the hardware using dual-scroll gears and FSRs to keep compression consistent for different body sizes, and added haptic feedback to more areas, like the thighs. The VR content and pacing were also updated based on feedback from the exhibition. \nAn expert review with the University of Taipei Department of Counseling Psychology, including graduate students and faculty, led to more improvements and helped shift the target audience to psychology students and professionals who work with body image and eating disorders.",
-    gallery: [
-      "media/EmBelt_assembly.png"
-    ]
-  },{
-    title: "塭底家 Home, Fish Farm",
-    tags: ["Community Tech", "Interaction Design", "Unity"],
-    highlights: [
-      "Homecoming Entrepreneurship Contest finalist"
-    ],
-    desc: "Home, Fish Farm is a VR game designed to enhance the experience of visitors on the Fish Forest fish farm tour. Participants listen to a guide's narration while exploring the terrain, diverse fish species, and ecosystems within the fish farm.",
-    cover: "media/fishfarmDemo.webp",
-    modaldesc:"Home Fish Farm is an interactive VR experience that helps people learn about the environment and daily routines of a local fish farm through hands-on tasks. The project turns activities like feeding fish, checking pond conditions, and moving around the farm into short VR sessions that focus on learning by doing. \nI handled the system design, interaction design, and development in Unity, deciding how to present environmental details and local practices to users. ",
-    gallery: [
-      "media/IMG_6023.JPG", "media/IMG_7740.PNG", "media/IMG_6037_1_0.HEIC", "media/IMG_5999_5_0.HEIC"
-    ]
-  },
+ 
+
+
     {
     title: "Helmo",
     tags: ["Embedded Systems", "Mobility Safety", "Prototyping"],
@@ -91,17 +121,17 @@ const projects = [
       "media/helmet_struc.png", "media/helmet_step.png"
     ]
   },
-    {
-    title: "Multi-View Drone Evaluation",
-    tags: ["HCI Research", "User Study", "Data Analysis"],
-    highlights: [
-      "2024 IEEM Department Project Exhibition #Outstanding Work"
-    ],
-    desc: "We carried out a research project to evaluate how well people recognize objects when using different drone control perspectives and interfaces. Our user experiments tested four UI variations that combined FPV and TPV on a PC interface.",
-    cover: "media/newdroneDemo.webp",
-    modaldesc: "This project explores how different drone control perspectives and interface designs impact object recognition. We created four user interface setups that use both first-person (FPV) and third-person (TPV) views with a PC-based control system. \nMy role included helping design the interface, setting up the experiment, building the testing system, and analyzing the results with ANOVA to see how viewpoint and interface setup affect recognition accuracy. ",
-    gallery: [
 
+      {
+    title: "EmBelt 2.0",
+    tags: ["Sensing & Control", "Expert Evaluation", "User Research"],
+    highlights: [
+    ],
+    desc: "EmBelt is a extended project from Embrace. Combining VR and an electronic belt-like haptic device, it aims to raise people's awareness on body image concerns and related eating disorders.",
+    cover: "media/representativeImg.webp",
+    modaldesc:"EmBelt 2.0 was created in response to feedback from users and experts, with a focus on making the device more reliable and improving the experience. \nI redesigned the hardware using dual-scroll gears and FSRs to keep compression consistent for different body sizes, and added haptic feedback to more areas, like the thighs. The VR content and pacing were also updated based on feedback from the exhibition. \nAn expert review with the University of Taipei Department of Counseling Psychology, including graduate students and faculty, led to more improvements and helped shift the target audience to psychology students and professionals who work with body image and eating disorders.",
+    gallery: [
+      "media/EmBelt_assembly.png"
     ]
   }
 ];
@@ -186,11 +216,23 @@ function openModal(index){
     });
   }
 
-  // Handle optional sections
-  modalSections.innerHTML = (p.sections || []).map(s => `
-    <h4>${escapeHtml(s.heading)}</h4>
-    <p>${escapeHtml(s.text)}</p>
-  `).join("");
+  // Handle optional sections and resource links
+  modalSections.innerHTML = `
+    ${(p.sections || []).map(s => `
+      <h4>${escapeHtml(s.heading)}</h4>
+      <p>${escapeHtml(s.text)}</p>
+    `).join("")}
+
+    ${(p.resources || []).map(r => `
+      <p class="project-resource">
+        <a href="${escapeHtml(r.url)}"
+          target="_blank"
+          rel="noopener noreferrer">
+          ${escapeHtml(r.label)}
+        </a>
+      </p>
+    `).join("")}
+  `;
 
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
