@@ -63,12 +63,20 @@ const projects = [
     tags: ["Robotic Arm", "OpenCV", "Robot Manipulation"],
     highlights: [
     ],
-    desc: "Pen Picker is a solo project where I used the RealSense SDK and OpenCV to detect and locate pens, then guided a Trossen Robotics PincherX 100 to reach and pick them up.",
+    desc: "I used the RealSense SDK and OpenCV to detect and locate pens, then guided a Trossen Robotics PincherX 100 to reach and pick them up.",
     cover: "media/penVideo.webp",
     modaldesc:"Sizzler! is a hackathon project where our team explored a wearable, head-mounted interface for sensing and interaction. We worked together in a short, focused sprint to build a working prototype that combined mechanical structure, electronics, and system design. \nAlthough I was listed under Special Thanks because of health issues during the event, I helped with the mechanical design, especially the structural layout and making sure the wearable form was practical.",
     gallery: [
 
     ]
+  },
+    {
+    title: "Haptic Keyboard",
+    tags: ["Embedded Systems", "Sensor Integration", "Hardware Prototyping"],
+    highlights: [
+    ],
+    desc: "Haptic Keyboard combines LRA and ERM to create haptic feedback while Hall sensors beneath the switches detect key movement. It mimics the tactile feel of mechanical keyboards while allowing users to adjust key actuation points.",
+    cover: "media/hapticKey.jpg"
   },
     {
     title: "AR Hand Gesture Controlled Drone",
