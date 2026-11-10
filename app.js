@@ -70,14 +70,14 @@ const projects = [
 
     ]
   },
-    {
-    title: "Haptic Keyboard",
-    tags: ["Embedded Systems", "Sensor Integration", "Hardware Prototyping"],
-    highlights: [
-    ],
-    desc: "Haptic Keyboard combines LRA and piezo actuator to create haptic feedback while Hall sensors beneath the switches detect key movement. It mimics the tactile feel of mechanical keyboards while allowing users to adjust key actuation points.",
-    cover: "media/hapticKey.jpg"
-  },
+  //   {
+  //   title: "Haptic Keyboard",
+  //   tags: ["Embedded Systems", "Sensor Integration", "Hardware Prototyping"],
+  //   highlights: [
+  //   ],
+  //   desc: "Haptic Keyboard combines LRA and piezo actuator to create haptic feedback while Hall sensors beneath the switches detect key movement. It mimics the tactile feel of mechanical keyboards while allowing users to adjust key actuation points.",
+  //   cover: "media/hapticKey.jpg"
+  // },
     {
     title: "AR Hand Gesture Controlled Drone",
     tags: ["AR", "Gesture Interaction", "Drone Control"],
